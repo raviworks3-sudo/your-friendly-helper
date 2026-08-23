@@ -1,5 +1,5 @@
 export const PDF_URL =
-  "https://cdn.jsdelivr.net/gh/hildecorp/redbellydaotask25@main/website/TASK-25-Proposal-Evaluation-Rubric.pdf";
+  "https://cdn.jsdelivr.net/gh/hildecorp/redbellydaotask25@main/website/TASK-25Proposal-Evaluation-Rubric.pdf";
 
 export const DOCS_URL =
   "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/hildecorp/redbellydaotask25/main/website/TASK-25-Proposal-Evaluation-Rubric.docx&embedded=true";
