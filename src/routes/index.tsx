@@ -293,10 +293,18 @@ function Index() {
               </div>
               <div className="rounded-lg border border-border bg-card p-6 md:p-8">
                 <h3 className="mb-3 text-base font-semibold text-foreground">
-                  Proposals That Already Supersede Constitution v1.2
+                  Proposals and Amendments That Already Supersede Prior Text
                 </h3>
                 <div className="max-w-[75ch] space-y-4 text-base text-foreground-secondary">
-                  <p>None confirmed as of this writing.</p>
+                  <p>
+                    Constitution v1.3 is now the governing text, replacing v1.2. Every section
+                    number in this framework has been updated to match. The clearest change:
+                    Section 3, Working Groups, is gone from v1.3. The DAO Guild Structure
+                    Consolidation vote (20 September 2025) had already merged five pods into three;
+                    v1.3 completed that by removing the section outright. Criterion 3 of the
+                    ratified checklist still names three working groups by text, so pre-screening
+                    still checks against them, it just has no Constitution section left to cite.
+                  </p>
                 </div>
               </div>
               <div className="rounded-lg border border-border bg-card p-6 md:p-8">
@@ -305,14 +313,15 @@ function Index() {
                 </h3>
                 <div className="max-w-[75ch] space-y-4 text-base text-foreground-secondary">
                   <p>
-                    When Constitution v1.2 is re-ratified or superseded, check the 11 criteria
-                    against the new text in this order: Section 6.2 (Budget Alignment), Section 7
-                    (Payment and Payout), Section 3 (Strategic Fit), Section 6.1 (Oversight and
-                    Accountability), Section 5 (Contribution Equity), Section 8 (Community
+                    When Constitution v1.3 is re-ratified or superseded, check the 11 criteria
+                    against the new text in this order: Section 5.7 (Budget Alignment), Section 6
+                    (Payment and Payout), no anchor (Strategic Fit), Section 5.6 (Oversight and
+                    Accountability), Section 4 (Contribution Equity), Section 7 (Community
                     Involvement), and the standalone Code of Conduct v1.0 (Compliance and Ethical
                     Standards). The four criteria with no Constitution anchor, Feasibility and
                     Timeline, Impact and Measurement, Risk and Mitigation, and Co-Funding and
                     Leverage, stay unanchored unless a new provision explicitly covers them. Update
+
                     both the rubric document and the citation links in Section 03 and Section 05 to
                     point at the new section numbers. If a later Snapshot proposal supersedes a
                     section without a full re-ratification, follow the pattern already used in
