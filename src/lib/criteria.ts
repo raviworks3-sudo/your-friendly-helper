@@ -70,7 +70,7 @@ export const CRITERIA: Criterion[] = [
   {
     number: "05",
     name: "Oversight & Accountability",
-    anchor: "Section 6.1",
+    anchor: "Section 5.6",
     flag: "Flags if the reviewer field or the monthly update plan is empty.",
     link: `${CONSTITUTION_URL}#page=10`,
   },
@@ -95,7 +95,7 @@ export const CRITERIA: Criterion[] = [
   {
     number: "09",
     name: "Contribution Equity",
-    anchor: "Section 5",
+    anchor: "Section 4",
     flag: "Flags if one contributor's share of payout is disproportionate, or a listed contributor already holds another paid DAO role with no justification given.",
     link: `${CONSTITUTION_URL}#page=9`,
   },
@@ -109,8 +109,8 @@ export const CRITERIA: Criterion[] = [
   {
     number: "11",
     name: "Community Involvement",
-    anchor: "Section 8",
+    anchor: "Section 7",
     flag: "Flags only if the evidence field is completely empty. The ratified checklist gives this criterion no flag condition at all, so this flag is always informational, never a failure.",
-    link: `${CONSTITUTION_URL}#page=12`,
+    link: `${CONSTITUTION_URL}#page=13`,
   },
 ];
