@@ -152,14 +152,22 @@ const PROPOSAL_20: FormState = {
 type Result = { number: string; status: "PASS" | "FLAG"; reason?: string | undefined; note?: string | undefined };
 
 const blank = (s: string) => s.trim().length === 0;
-const words = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
+const amount = (s: string) => {
+  const n = Number(s.replace(/[^0-9.]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+};
+const NAMED_GROUPS = ["Marketing", "Community", "Builder-Develop"];
 
 function evaluate(f: FormState): Result[] {
   const out: Result[] = [];
 
   const r1: string[] = [];
-  if (blank(f.usdt) || blank(f.rbnt)) r1.push("USDT or RBNT amount is empty.");
-  if (words(f.budgetJustification) < 20) r1.push("Budget justification is under 20 words.");
+  if (blank(f.usdt) && blank(f.rbnt)) r1.push("USDT and RBNT amounts are both empty.");
+  if (!blank(f.usdt) && amount(f.usdt) > 100000)
+    r1.push("USDT requested is over the 100,000 annual cap in Section 6.2.");
+  if (!blank(f.rbnt) && amount(f.rbnt) > 10000000)
+    r1.push("RBNT requested is over the 10,000,000 pool in Section 6.2.");
+  if (blank(f.budgetJustification)) r1.push("Budget justification is empty.");
   out.push({ number: "01", status: r1.length ? "FLAG" : "PASS", reason: r1.join(" ") });
 
   const r2: string[] = [];
@@ -169,12 +177,13 @@ function evaluate(f: FormState): Result[] {
   else if (f.milestones.some(blank)) r2.push("A milestone row is empty.");
   out.push({ number: "02", status: r2.length ? "FLAG" : "PASS", reason: r2.join(" ") });
 
-  const r3 = blank(f.alignment)
-    ? "Alignment explanation is empty."
-    : words(f.alignment) < 15
-      ? "Alignment explanation is under 15 words."
-      : "";
-  out.push({ number: "03", status: r3 ? "FLAG" : "PASS", reason: r3 });
+  const r3: string[] = [];
+  if (blank(f.alignment)) r3.push("Alignment explanation is empty.");
+  if (!NAMED_GROUPS.includes(f.pod))
+    r3.push(
+      "Selected pod is not one of the three groups named in Criterion 3: Marketing, Community, Builder-Develop.",
+    );
+  out.push({ number: "03", status: r3.length ? "FLAG" : "PASS", reason: r3.join(" ") });
 
   const r4: string[] = [];
   if (blank(f.timeline)) r4.push("Timeline is empty.");
