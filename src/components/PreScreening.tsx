@@ -164,9 +164,9 @@ function evaluate(f: FormState): Result[] {
   const r1: string[] = [];
   if (blank(f.usdt) && blank(f.rbnt)) r1.push("USDT and RBNT amounts are both empty.");
   if (!blank(f.usdt) && amount(f.usdt) > 100000)
-    r1.push("USDT requested is over the 100,000 annual cap in Section 6.2.");
+    r1.push("USDT requested is over the 100,000 annual cap in Section 5.7.");
   if (!blank(f.rbnt) && amount(f.rbnt) > 10000000)
-    r1.push("RBNT requested is over the 10,000,000 pool in Section 6.2.");
+    r1.push("RBNT requested is over the 10,000,000 pool in Section 5.7.");
   if (blank(f.budgetJustification)) r1.push("Budget justification is empty.");
   out.push({ number: "01", status: r1.length ? "FLAG" : "PASS", reason: r1.join(" ") });
 
@@ -181,7 +181,7 @@ function evaluate(f: FormState): Result[] {
   if (blank(f.alignment)) r3.push("Alignment explanation is empty.");
   if (!NAMED_GROUPS.includes(f.pod))
     r3.push(
-      "Selected pod is not one of the three groups named in Criterion 3: Marketing, Community, Builder-Develop.",
+      "Selected pod is not one of the three groups named in Criterion 3: Community, Marketing, Builder-Develop.",
     );
   out.push({ number: "03", status: r3.length ? "FLAG" : "PASS", reason: r3.join(" ") });
 
