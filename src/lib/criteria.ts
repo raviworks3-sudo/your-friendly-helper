@@ -21,7 +21,7 @@ export const DEVTO_URL =
 export const DISCREPANCIES: { label: string; body: string }[] = [
   {
     label: "Three working groups vs. five pods",
-    body: "The ratified checklist text names three working groups: Community, Marketing, Developers/Builders. Constitution Section 3 ratifies five pods, adding Researcher and Partnerships. This framework follows the Constitution as the current, in-force structure. A Researcher or Partnerships submission is not flagged for its pod choice.",
+    body: "The ratified checklist text names three working groups: Community, Marketing, Developers/Builders. Constitution Section 3 ratifies five pods, adding Researcher and Partnerships. This framework does not resolve which text controls. Pre-screening applies Criterion 3 exactly as ratified: alignment with one of the three named groups. A Researcher or Partnerships submission flags under a literal reading, same as the rubric document's Known Discrepancies item 1. The checklist was ratified 6 October 2025, 16 days after the Constitution's 20 September 2025 date, so chronology does not settle which text controls either. Pod leaders need to resolve this or amend the checklist.",
   },
   {
     label: "Criterion 11 has no ratified flag condition",
