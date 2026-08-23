@@ -20,9 +20,10 @@ export const DEVTO_URL =
 
 export const DISCREPANCIES: { label: string; body: string }[] = [
   {
-    label: "Three working groups vs. five pods",
-    body: "The ratified checklist text names three working groups: Community, Marketing, Developers/Builders. Constitution Section 3 ratifies five pods, adding Researcher and Partnerships. This framework does not resolve which text controls. Pre-screening applies Criterion 3 exactly as ratified: alignment with one of the three named groups. A Researcher or Partnerships submission flags under a literal reading, same as the rubric document's Known Discrepancies item 1. The checklist was ratified 6 October 2025, 16 days after the Constitution's 20 September 2025 date, so chronology does not settle which text controls either. Pod leaders need to resolve this or amend the checklist.",
+    label: "Three working groups vs. the retired pod structure",
+    body: "Criterion 3 checks alignment with one of three working groups, Community, Marketing, Developers-Builders. Constitution v1.2 named five pods for this. The DAO Guild Structure Consolidation vote, passed 20 September 2025, merged two of those five into the other three. Constitution v1.3 then removed the pod structure from the Constitution entirely. The three groups the checklist names are still the ones in practice, but nothing in the current Constitution defines or anchors them. A flag on Criterion 3 is expected for any submission today, not a sign of a broken tool.",
   },
+
   {
     label: "Criterion 11 has no ratified flag condition",
     body: "Every other criterion in the ratified checklist pairs a pass condition with an explicit flag rule. Community Involvement does not. Any flag raised here is labelled informational only and never marks a proposal as failing pre-screening on its own.",
@@ -41,24 +42,25 @@ export const CRITERIA: Criterion[] = [
   {
     number: "01",
     name: "Budget Alignment & Limits",
-    anchor: "Section 6.2",
-    flag: "Flags if the USDT/RBNT split is missing, if USDT requested is over the 100,000 annual cap or RBNT requested is over the 10,000,000 pool set in Section 6.2, or if the justification field is empty.",
+    anchor: "Section 5.7",
+    flag: "Flags if the USDT/RBNT split is missing, if USDT requested is over the 100,000 annual cap or RBNT requested is over the 10,000,000 pool set in Section 5.7, or if the justification field is empty.",
     link: `${CONSTITUTION_URL}#page=10`,
   },
   {
     number: "02",
     name: "Payment & Payout Structure",
-    anchor: "Section 7",
+    anchor: "Section 6",
     flag: "Flags if Upfront is selected with no justification, or the milestone list is empty.",
-    link: `${CONSTITUTION_URL}#page=11`,
+    link: `${CONSTITUTION_URL}#page=12`,
   },
   {
     number: "03",
     name: "Strategic Fit",
-    anchor: "Section 3",
-    flag: "Flags if the alignment text is empty, or the pod selected is not one of the three named in the ratified text: Community, Marketing, Developers-Builders. Researcher and Partnerships are ratified Constitution pods not named in Criterion 3, so they flag under a literal reading. See Known Discrepancies.",
-    link: `${CONSTITUTION_URL}#page=7`,
+    anchor:
+      "No Constitution anchor. Constitution v1.3 retired the pod structure entirely. See Known Discrepancies.",
+    flag: "Flags if the alignment explanation is empty, or the pod selected is not one of the three named in the ratified text: Community, Marketing, Developers-Builders.",
   },
+
   {
     number: "04",
     name: "Feasibility & Timeline",
