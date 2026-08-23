@@ -293,6 +293,14 @@ function Index() {
               </div>
               <div className="rounded-lg border border-border bg-card p-6 md:p-8">
                 <h3 className="mb-3 text-base font-semibold text-foreground">
+                  Proposals That Already Supersede Constitution v1.2
+                </h3>
+                <div className="max-w-[75ch] space-y-4 text-base text-foreground-secondary">
+                  <p>None confirmed as of this writing.</p>
+                </div>
+              </div>
+              <div className="rounded-lg border border-border bg-card p-6 md:p-8">
+                <h3 className="mb-3 text-base font-semibold text-foreground">
                   Updating the Mapping When the Constitution Is Amended
                 </h3>
                 <div className="max-w-[75ch] space-y-4 text-base text-foreground-secondary">

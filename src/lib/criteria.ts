@@ -42,7 +42,7 @@ export const CRITERIA: Criterion[] = [
     number: "01",
     name: "Budget Alignment & Limits",
     anchor: "Section 6.2",
-    flag: "Flags if the USDT or RBNT field is empty while the proposal clearly needs funding, or the justification is under roughly 20 words.",
+    flag: "Flags if the USDT/RBNT split is missing, if USDT requested is over the 100,000 annual cap or RBNT requested is over the 10,000,000 pool set in Section 6.2, or if the justification field is empty.",
     link: `${CONSTITUTION_URL}#page=10`,
   },
   {
@@ -56,7 +56,7 @@ export const CRITERIA: Criterion[] = [
     number: "03",
     name: "Strategic Fit",
     anchor: "Section 3",
-    flag: "Flags if the alignment text is empty or under roughly 15 words. Never flags based on which of the five pods is chosen.",
+    flag: "Flags if the alignment text is empty, or the pod selected is not one of the three named in the ratified text: Community, Marketing, Developers-Builders. Researcher and Partnerships are ratified Constitution pods not named in Criterion 3, so they flag under a literal reading. See Known Discrepancies.",
     link: `${CONSTITUTION_URL}#page=7`,
   },
   {
