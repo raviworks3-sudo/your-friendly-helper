@@ -99,7 +99,7 @@ function Index() {
                     rel="noopener noreferrer"
                     className="group inline-flex flex-col gap-1 text-[var(--accent-text)] transition-colors hover:text-[var(--primary)] sm:flex-row sm:items-baseline sm:gap-3"
                   >
-                    <span className="text-base font-semibold">Constitution v1.2</span>
+                    <span className="text-base font-semibold">Constitution v1.3</span>
                     <span className="font-mono text-sm text-muted-foreground group-hover:text-[var(--accent-text)]">
                       PDF
                     </span>
